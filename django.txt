@@ -1,0 +1,4 @@
+after updating the models:
+
+python manage.py makemigrations
+python manage.py migrate --run-syncdb
