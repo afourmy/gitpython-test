@@ -15,12 +15,15 @@ vrf definition test
 !
 vrf definition test6
 !
+vrf definition test7
+!
 interface Management1
    ip address 192.168.105.5/24
 !
 no ip routing
 no ip routing vrf test
 no ip routing vrf test6
+no ip routing vrf test7
 !
 management api http-commands
    no shutdown
