@@ -13,9 +13,6 @@ username admin role network-admin secret sha512 $6$TdKvpqqBZzkdqicX$y7jjIlZ5fKfs
 !
 vrf definition test
 !
-interface Loopback11
-   ip address 1.1.1.1/32
-!
 interface Management1
    ip address 192.168.105.5/24
 !
