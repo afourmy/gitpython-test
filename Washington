@@ -1,5 +1,5 @@
 ! Command: show running-config
-! device: localhost (vEOS, EOS-4.21.1.1F)dsfghj
+! device: localhost (vEOS, EOS-4.21.1.1F)
 !
 ! boot system flash:/vEOS-lab.swi
 !
