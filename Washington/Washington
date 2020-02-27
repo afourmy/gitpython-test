@@ -1,4 +1,4 @@
-! Command: show running-config 
+! Command: show running-config
 ! device: localhost (vEOS, EOS-4.21.1.1F)
 !
 ! boot system flash:/vEOS-lab.swi
@@ -13,7 +13,7 @@ username admin role network-admin secret sha512 $6$TdKvpqqBZzkdqicX$y7jjIlZ5fKfs
 !
 vrf definition test
 !
-interface Loopback10
+interface Loopback16
    ip address 5.5.5.5/32
 !
 interface Loopback11
