@@ -1,12 +1,12 @@
-                    SHOW USERS
-                                                  ----------
+                              SHOW USERS
+                              ----------
 
 
 shusers -     Line      User        Host(s)       Idle        Location       
-shusers - *  1 vty 3    admin       idle          00:00:04    192.168.56.102 
+shusers - *  1 vty 3    admin       idle          00:00:03    192.168.56.102 
 
-                    SHOW IP INTERFACE BRIEF
-                                                  -----------------------
+                              SHOW IP INTERFACE BRIEF
+                              -----------------------
 
 
 shipintbr -                                                                                 Address 
@@ -14,8 +14,8 @@ shipintbr - Interface         IP Address             Status       Protocol      
 shipintbr - ----------------- ---------------------- ------------ -------------- ---------- ------- 
 shipintbr - Management1       192.168.56.50/24       up           up                1500            
 
-                    SHOW VRF
-                                                  --------
+                              SHOW VRF
+                              --------
 
 
    VRF           RD              Protocols       State             Interfaces  
