@@ -1,14 +1,14 @@
 
-                              SHOW USERS
-                              **********
+                              CMD SHOW USERS shusers
+                              **********************
 
 
 shusers -     Line      User        Host(s)       Idle        Location       
-shusers - *  1 vty 3    admin       idle          00:00:07    192.168.56.102 
+shusers - *  1 vty 3    admin       idle          00:00:06    192.168.56.102 
 
 
-                              SHOW IP INTERFACE BRIEF
-                              ***********************
+                              CMD SHOW IP INTERFACE BRIEF shipintbr
+                              *************************************
 
 
 shipintbr -                                                                                 Address 
@@ -17,8 +17,8 @@ shipintbr - ----------------- ---------------------- ------------ --------------
 shipintbr - Management1       192.168.56.50/24       up           up                1500            
 
 
-                              SHOW VRF
-                              ********
+                              CMD SHOW VRF 
+                              *************
 
 
    VRF           RD              Protocols       State             Interfaces  
@@ -29,54 +29,54 @@ shipintbr - Management1       192.168.56.50/24       up           up            
    napalm        <not set>       ipv4,ipv6       pending create                
 
 
-                              
-                              
+                              CMD  
+                              *****
 
 
 
 
-                              
-                              
+                              CMD  
+                              *****
 
 
 
 
-                              
-                              
+                              CMD  
+                              *****
 
 
 
 
-                              
-                              
+                              CMD  
+                              *****
 
 
 
 
-                              
-                              
+                              CMD  
+                              *****
 
 
 
 
-                              
-                              
+                              CMD  
+                              *****
 
 
 
 
-                              
-                              
+                              CMD  
+                              *****
 
 
 
 
-                              
-                              
+                              CMD  
+                              *****
 
 
 
 
-                              
-                              
+                              CMD  
+                              *****
 
