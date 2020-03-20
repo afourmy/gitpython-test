@@ -1,0 +1,25 @@
+
+get_interfaces_counters: 
+Management1: 
+	tx_octets: 56403
+	rx_octets: 47978
+	tx_unicast_packets: 471
+	rx_unicast_packets: 452
+	tx_multicast_packets: 0
+	rx_multicast_packets: 0
+	tx_broadcast_packets: 0
+	rx_broadcast_packets: 0
+	tx_discards: 0
+	rx_discards: 0
+	tx_errors: 0
+	rx_errors: 0
+get_facts: 
+hostname: localhost
+fqdn: localhost
+vendor: Arista
+model: vEOS
+serial_number: 
+os_version: 4.23.1F-14427155.4231F
+uptime: 2807
+interface_list: 
+	- Management1

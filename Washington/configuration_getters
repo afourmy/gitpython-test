@@ -1,0 +1,60 @@
+
+get_config: 
+startup: ! Command: show startup-config
+! Startup-config last modified at  Thu Feb  6 12:48:17 2020 by admin
+! device: localhost (vEOS, EOS-4.23.1F)
+!
+! boot system flash:/vEOS-lab.swi
+!
+transceiver qsfp default-mode 4x10G
+!
+spanning-tree mode mstp
+!
+no aaa root
+!
+username admin privilege 15 role network-admin secret sha512 $6$ShuyKzG/D1oOik78$rv5.M/fskKvrpPT9gntdwDlBSA9KUgsXhmjWTJZNobffvOK30/IpWhxVM7GEW6/Qtm1YUe2yvtLDgBLVvAb8R.
+!
+vrf instance napalm
+!
+interface Ethernet1
+!
+interface Management1
+   ip address 192.168.56.50/24
+!
+no ip routing
+no ip routing vrf napalm
+!
+management api http-commands
+   no shutdown
+!
+end
+
+running: ! Command: show running-config
+! device: localhost (vEOS, EOS-4.23.1F)
+!
+! boot system flash:/vEOS-lab.swi
+!
+transceiver qsfp default-mode 4x10G
+!
+spanning-tree mode mstp
+!
+no aaa root
+!
+username admin privilege 15 role network-admin secret sha512 $6$ShuyKzG/D1oOik78$rv5.M/fskKvrpPT9gntdwDlBSA9KUgsXhmjWTJZNobffvOK30/IpWhxVM7GEW6/Qtm1YUe2yvtLDgBLVvAb8R.
+!
+vrf instance napalm
+!
+interface Ethernet1
+!
+interface Management1
+   ip address 192.168.56.50/24
+!
+no ip routing
+no ip routing vrf napalm
+!
+management api http-commands
+   no shutdown
+!
+end
+
+candidate: 
