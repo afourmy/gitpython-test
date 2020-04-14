@@ -4,7 +4,7 @@
 
 
 shusers -     Line      User        Host(s)       Idle        Location       
-shusers - *  1 vty 3    admin       idle          00:00:04    192.168.56.102 
+shusers - *  1 vty 3    admin       idle          00:00:00    192.168.56.102 
 
 
                               CMD 'SHOW IP INTERFACE BRIEF' [shipintbr]
@@ -21,7 +21,7 @@ shipintbr - Management1       192.168.56.50/24       up           up            
                               **************
 
 
-   VRF           RD              Protocols       State             Interfaces  
+VRF           RD              Protocols       State             Interfaces  
 ------------- --------------- --------------- -------------------- ----------- 
    default       <not set>       ipv4,ipv6       v4:no routing,    Management1 
                                                  v6:no routing                 
