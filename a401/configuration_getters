@@ -1,0 +1,32 @@
+
+get_arp_table: 
+- 
+	interface: Management1
+	mac: 08:00:27:EB:EC:25
+	ip: 192.168.56.102
+	age: 0.0
+
+get_interfaces_counters: 
+Management1: 
+	tx_octets: 168381
+	rx_octets: 91818
+	tx_unicast_packets: 1307
+	rx_unicast_packets: 965
+	tx_multicast_packets: 0
+	rx_multicast_packets: 0
+	tx_broadcast_packets: 0
+	rx_broadcast_packets: 0
+	tx_discards: 0
+	rx_discards: 0
+	tx_errors: 0
+	rx_errors: 0
+get_facts: 
+hostname: localhost
+fqdn: localhost
+vendor: Arista
+model: vEOS
+serial_number: 
+os_version: 4.23.1F-14427155.4231F
+uptime: 4573
+interface_list: 
+	- Management1
