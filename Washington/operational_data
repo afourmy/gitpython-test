@@ -1,10 +1,35 @@
 
-                              CMD 'SHOW USERS' [shusers]
-                              **************************
+                              CMD 'SHOW RUN' [shusers]
+                              ************************
 
 
-shusers -     Line      User        Host(s)       Idle        Location       
-shusers - *  1 vty 3    admin       idle          00:00:05    192.168.56.102 
+shusers - ! Command: show running-config
+shusers - ! device: localhost (vEOS, EOS-4.23.1F)
+shusers - !
+shusers - ! boot system flash:/vEOS-lab.swi
+shusers - !
+shusers - transceiver qsfp default-mode 4x10G
+shusers - !
+shusers - spanning-tree mode mstp
+shusers - !
+shusers - no aaa root
+shusers - !
+shusers - username admin privilege 15 role network-admin secret sha512 $6$ShuyKzG/D1oOik78$rv5.M/fskKvrpPT9gntdwDlBSA9KUgsXhmjWTJZNobffvOK30/IpWhxVM7GEW6/Qtm1YUe2yvtLDgBLVvAb8R.
+shusers - !
+shusers - vrf instance napalm
+shusers - !
+shusers - interface Ethernet1
+shusers - !
+shusers - interface Management1
+shusers -    ip address 192.168.56.50/24
+shusers - !
+shusers - no ip routing
+shusers - no ip routing vrf napalm
+shusers - !
+shusers - management api http-commands
+shusers -    no shutdown
+shusers - !
+shusers - end
 
 
                               CMD 'SHOW IP INTERFACE BRIEF' [shipintbr]
