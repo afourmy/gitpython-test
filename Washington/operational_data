@@ -4,7 +4,7 @@ get_arp_table:
 	interface: Management1
 	mac: 0A:00:27:00:00:04
 	ip: 192.168.56.1
-	age: 85.0
+	age: 105.0
 - 
 	interface: Management1
 	mac: 08:00:27:EB:EC:25
@@ -16,7 +16,7 @@ Management1:
 	is_up: True
 	is_enabled: True
 	description: 
-	last_flapped: 1599122471.3520508
+	last_flapped: 1599122471.3520427
 	mtu: 1500
 	speed: 100
 	mac_address: 08:00:27:57:C0:A6
@@ -24,7 +24,7 @@ Loopback1:
 	is_up: True
 	is_enabled: True
 	description: 
-	last_flapped: 1599122472.5837471
+	last_flapped: 1599122472.5837483
 	mtu: 65535
 	speed: 0
 	mac_address: 
@@ -32,7 +32,7 @@ Loopback2:
 	is_up: True
 	is_enabled: True
 	description: 
-	last_flapped: 1599122472.5837972
+	last_flapped: 1599122472.5837996
 	mtu: 65535
 	speed: 0
 	mac_address: 
@@ -40,7 +40,7 @@ Loopback3:
 	is_up: True
 	is_enabled: True
 	description: 
-	last_flapped: 1599122472.58383
+	last_flapped: 1599122472.5838294
 	mtu: 65535
 	speed: 0
 	mac_address: 
