@@ -1,60 +1,41 @@
 
-                              COMMAND 'SHOW RUN' [shusers]
-                              ****************************
+get_arp_table: 
+- 
+	interface: Management1
+	mac: 08:00:27:EB:EC:25
+	ip: 192.168.56.102
+	age: 0.0
 
-
-shusers - ! Command: show running-config
-shusers - ! device: localhost (vEOS, EOS-4.23.1F)
-shusers - !
-shusers - ! boot system flash:/vEOS-lab.swi
-shusers - !
-shusers - transceiver qsfp default-mode 4x10G
-shusers - !
-shusers - spanning-tree mode mstp
-shusers - !
-shusers - no aaa root
-shusers - !
-shusers - username admin privilege 15 role network-admin secret sha512 $6$ShuyKzG/D1oOik78$rv5.M/fskKvrpPT9gntdwDlBSA9KUgsXhmjWTJZNobffvOK30/IpWhxVM7GEW6/Qtm1YUe2yvtLDgBLVvAb8R.
-shusers - !
-shusers - vrf instance CUSTOMER-TRAFFIC-28
-shusers - !
-shusers - interface Ethernet1
-shusers - !
-shusers - interface Loopback28
-shusers -    ip address 10.34.34.3/24
-shusers - !
-shusers - interface Management1
-shusers -    ip address 192.168.56.50/24
-shusers - !
-shusers - ip address virtual source-nat address 10.35.35.3
-shusers - !
-shusers - no ip routing
-shusers - no ip routing vrf CUSTOMER-TRAFFIC-28
-shusers - !
-shusers - management api http-commands
-shusers -    no shutdown
-shusers - !
-shusers - end
-
-
-                              COMMAND 'SHOW IP INTERFACE BRIEF' [shipintbr]
-                              *********************************************
-
-
-shipintbr -                                                                                  Address 
-shipintbr - Interface         IP Address             Status       Protocol            MTU    Owner   
-shipintbr - ----------------- ---------------------- ------------ -------------- ----------- ------- 
-shipintbr - Loopback28        10.34.34.3/24          up           up                65535            
-shipintbr - Management1       192.168.56.50/24       up           up                 1500            
-
-
-                              COMMAND 'SHOW VRF'
-                              ******************
-
-
-   VRF                       RD              Protocols       State             Interfaces              
-------------------------- --------------- --------------- -------------------- ----------------------- 
-   CUSTOMER-TRAFFIC-28       <not set>       ipv4,ipv6       pending create                            
-   default                   <not set>       ipv4,ipv6       v4:no routing,    Loopback28, Management1 
-                                                             v6:no routing                             
-                                                                                                       
+get_interfaces: 
+Management1: 
+	is_up: True
+	is_enabled: True
+	description: 
+	last_flapped: 1599122471.3520494
+	mtu: 1500
+	speed: 100
+	mac_address: 08:00:27:57:C0:A6
+Loopback1: 
+	is_up: True
+	is_enabled: True
+	description: 
+	last_flapped: 1599122472.5837483
+	mtu: 65535
+	speed: 0
+	mac_address: 
+Loopback2: 
+	is_up: True
+	is_enabled: True
+	description: 
+	last_flapped: 1599122472.583798
+	mtu: 65535
+	speed: 0
+	mac_address: 
+Loopback3: 
+	is_up: True
+	is_enabled: True
+	description: 
+	last_flapped: 1599122472.5838313
+	mtu: 65535
+	speed: 0
+	mac_address: 
