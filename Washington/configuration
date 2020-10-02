@@ -12,24 +12,30 @@ transceiver qsfp default-mode 4x10G
 !
 spanning-tree mode mstp
 !
+aaa authorization exec default local
+!
 no aaa root
 !
 username admin privilege 15 role network-admin secret sha512 $6$ShuyKzG/D1oOik78$rv5.M/fskKvrpPT9gntdwDlBSA9KUgsXhmjWTJZNobffvOK30/IpWhxVM7GEW6/Qtm1YUe2yvtLDgBLVvAb8R.
 !
-vrf instance CUSTOMER-TRAFFIC-28
+vrf instance napalm
 !
 interface Ethernet1
 !
-interface Loopback28
-   ip address 10.34.34.3/24
+interface Loopback1
+   ip address 1.1.1.1/32
+!
+interface Loopback2
+   ip address 2.2.2.2/32
+!
+interface Loopback3
+   ip address 3.3.3.3/32
 !
 interface Management1
    ip address 192.168.56.50/24
 !
-ip address virtual source-nat address 10.35.35.3
-!
 no ip routing
-no ip routing vrf CUSTOMER-TRAFFIC-28
+no ip routing vrf napalm
 !
 management api http-commands
    no shutdown
