@@ -1,16 +1,16 @@
 {
     "configuration": {
-        "last_status": "Success",
-        "last_update": "2020-10-02 10:39:34.356602",
-        "last_failure": "Never",
-        "last_runtime": "2020-10-02 10:39:34.356602",
-        "last_duration": "6.237652s"
+        "status": "Success",
+        "update": "2020-10-02 11:16:49.363284",
+        "failure": "Never",
+        "runtime": "2020-10-02 11:16:49.363284",
+        "duration": "6.308002s"
     },
     "operational_data": {
-        "last_status": "Success",
-        "last_update": "2020-10-02 10:39:40.855944",
-        "last_failure": "Never",
-        "last_runtime": "2020-10-02 10:39:40.855944",
-        "last_duration": "3.554937s"
+        "status": "Success",
+        "update": "2020-10-02 11:16:55.905709",
+        "failure": "Never",
+        "runtime": "2020-10-02 11:16:55.905709",
+        "duration": "3.509847s"
     }
 }
