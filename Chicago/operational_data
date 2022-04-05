@@ -1,60 +1,25 @@
 
-                              COMMAND 'SHOW RUN' [shusers]
-                              ****************************
+                              COMMAND 'SH IP RO' [Routing table]
+                              **********************************
 
 
-shusers - ! Command: show running-config
-shusers - ! device: localhost (vEOS, EOS-4.23.1F)
-shusers - !
-shusers - ! boot system flash:/vEOS-lab.swi
-shusers - !
-shusers - transceiver qsfp default-mode 4x10G
-shusers - !
-shusers - spanning-tree mode mstp
-shusers - !
-shusers - no aaa root
-shusers - !
-shusers - username admin privilege 15 role network-admin secret sha512 $6$ShuyKzG/D1oOik78$rv5.M/fskKvrpPT9gntdwDlBSA9KUgsXhmjWTJZNobffvOK30/IpWhxVM7GEW6/Qtm1YUe2yvtLDgBLVvAb8R.
-shusers - !
-shusers - vrf instance CUSTOMER-TRAFFIC-28
-shusers - !
-shusers - interface Ethernet1
-shusers - !
-shusers - interface Loopback28
-shusers -    ip address 10.34.34.3/24
-shusers - !
-shusers - interface Management1
-shusers -    ip address 192.168.56.50/24
-shusers - !
-shusers - ip address virtual source-nat address 10.35.35.3
-shusers - !
-shusers - no ip routing
-shusers - no ip routing vrf CUSTOMER-TRAFFIC-28
-shusers - !
-shusers - management api http-commands
-shusers -    no shutdown
-shusers - !
-shusers - end
-
-
-                              COMMAND 'SHOW IP INTERFACE BRIEF' [shipintbr]
-                              *********************************************
-
-
-shipintbr -                                                                                  Address 
-shipintbr - Interface         IP Address             Status       Protocol            MTU    Owner   
-shipintbr - ----------------- ---------------------- ------------ -------------- ----------- ------- 
-shipintbr - Loopback28        10.34.34.3/24          up           up                65535            
-shipintbr - Management1       192.168.56.50/24       up           up                 1500            
-
-
-                              COMMAND 'SHOW VRF'
-                              ******************
-
-
-   VRF                       RD              Protocols       State             Interfaces              
-------------------------- --------------- --------------- -------------------- ----------------------- 
-   CUSTOMER-TRAFFIC-28       <not set>       ipv4,ipv6       pending create                            
-   default                   <not set>       ipv4,ipv6       v4:no routing,    Loopback28, Management1 
-                                                             v6:no routing                             
-                                                                                                       
+Routing table - 
+Routing table - VRF: default
+Routing table - Codes: C - connected, S - static, K - kernel, 
+Routing table -        O - OSPF, IA - OSPF inter area, E1 - OSPF external type 1,
+Routing table -        E2 - OSPF external type 2, N1 - OSPF NSSA external type 1,
+Routing table -        N2 - OSPF NSSA external type2, B - BGP, B I - iBGP, B E - eBGP,
+Routing table -        R - RIP, I L1 - IS-IS level 1, I L2 - IS-IS level 2,
+Routing table -        O3 - OSPFv3, A B - BGP Aggregate, A O - OSPF Summary,
+Routing table -        NG - Nexthop Group Static Route, V - VXLAN Control Service,
+Routing table -        DH - DHCP client installed default route, M - Martian,
+Routing table -        DP - Dynamic Policy Route, L - VRF Leaked
+Routing table - 
+Routing table - Gateway of last resort is not set
+Routing table - 
+Routing table -  C        1.1.1.1/32 is directly connected, Loopback1
+Routing table -  C        2.2.2.2/32 is directly connected, Loopback2
+Routing table -  C        3.3.3.3/32 is directly connected, Loopback3
+Routing table -  C        192.168.56.0/24 is directly connected, Management1
+Routing table - 
+Routing table - ! IP routing not enabled

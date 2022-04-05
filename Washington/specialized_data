@@ -1,0 +1,8 @@
+
+                              COMMAND 'SHOW USERS'
+                              ********************
+
+
+    Line      User        Host(s)       Idle        Location       
+*  1 vty 5    admin       idle          00:00:03    192.168.56.102 
+   2 vty 3    admin       idle          00:54:37    192.168.56.1   
