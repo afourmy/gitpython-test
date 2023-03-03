@@ -1,9 +1,16 @@
 {
     "operational_data": {
         "status": "Success",
-        "update": "2022-02-08 09:14:23.739464",
+        "update": "2023-03-03 04:14:33.660618",
         "failure": "Never",
-        "runtime": "2022-02-08 09:14:23.739464",
-        "duration": "2.506649s"
+        "runtime": "2023-03-03 04:14:33.660618",
+        "duration": "4.429609s"
+    },
+    "configuration": {
+        "status": "Success",
+        "update": "2023-03-03 04:14:01.214348",
+        "failure": "2023-03-03 04:12:55.223237",
+        "runtime": "2023-03-03 04:14:01.214348",
+        "duration": "3.185638s"
     }
 }

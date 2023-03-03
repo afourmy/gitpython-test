@@ -1,0 +1,16 @@
+{
+    "configuration": {
+        "status": "Success",
+        "update": "2023-03-03 04:14:19.511973",
+        "failure": "2023-03-03 04:12:45.728820",
+        "runtime": "2023-03-03 04:14:19.511973",
+        "duration": "2.459159s"
+    },
+    "operational_data": {
+        "status": "Success",
+        "update": "2023-03-03 04:14:38.232592",
+        "failure": "Never",
+        "runtime": "2023-03-03 04:14:38.232592",
+        "duration": "4.23187s"
+    }
+}
