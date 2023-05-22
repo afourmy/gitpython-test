@@ -12,26 +12,45 @@ transceiver qsfp default-mode 4x10G
 !
 spanning-tree mode mstp
 !
+aaa authorization exec default local
+!
 no aaa root
 !
 username admin privilege 15 role network-admin secret sha512 $6$ShuyKzG/D1oOik78$rv5.M/fskKvrpPT9gntdwDlBSA9KUgsXhmjWTJZNobffvOK30/IpWhxVM7GEW6/Qtm1YUe2yvtLDgBLVvAb8R.
+username sammy privilege 15 secret sha512 $6$SNpEccP107A7vx7/$dPsdkT.dmBwwumIgqAjXE4zbAr16xf/mT18FYQtkQlNBm64mOfhBnWhU7uuJzxmagVxPX2NkdQRgNzMzNQbEl.
+username sammy ssh-key ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQC4FS4+zPbd/49klI0czCDu6gHZRsSN4XOnEz0lfKNc2QE2s3/fH9Pgi1Zl7ByXInMWFfZ+ZWNgVgEhMSijFq7y8cOB6P+3jCeVz/6QLD9UN6jMz2pPI5azs2PQ0pbrSr0AMmHlru9ex1t0xgKiMRE85O3HpJWAkL14j//EXRV1HURwbU2mapkRR47Dl0DR4khuSYUMoYuGD8g8knE6r/NZt+UmNTGpGKegJ6EEXdKQepKUVUwC8hnFHIG0VfD/ubUrdgjrOIa/T+3mZwqyHmOZxytQP/KZzu72SeLOzb3QJKS6VY4Okm2NngJI/W7UbvnNaHnREkeA/27H5keuIUjbRBHBqiepxjK3UTJ0JVxXKuMlkOdTh8SnWdXKm0nZR66sc+lOBhRjz8pMxRKA3PiPoY1N41SYB+duIQUH19JcYVEbOAMyV2no3om6MtRrMzd3/SVNwRfiZIFsesydHNKap0iBczCt1gOEByOUwIvLEeE1hUb8JXSGD7g/1fnaBnpoqo/Q72Suur34NYMy9/6d5qZv+UKcDf2h0YD+PdirrmWcTeCaW13Z4fXY5dUIsKKTM3M+QuX/e6J/ooRX0qpm0GhhT1+yK4SJxyWbxBwoxzhqhWE3b4qWNcoRlMJWnln1gmzvYvCx3bihZaQGRcsce6DJGVhBYP+/VHvl6Q+LBw== email@email.com
 !
-vrf instance CUSTOMER-TRAFFIC-28
+vrf instance napalm
 !
-interface Ethernet1
+vrf instance test
 !
-interface Loopback28
-   ip address 10.34.34.3/24
+interface Loopback1
+   ip address 1.1.1.1/32
+!
+interface Loopback2
+   ip address 2.2.2.2/32
+!
+interface Loopback3
+   ip address 3.3.3.3/32
+!
+interface Loopback4
+!
+interface Loopback5
 !
 interface Management1
    ip address 192.168.56.50/24
 !
-ip address virtual source-nat address 10.35.35.3
-!
 no ip routing
-no ip routing vrf CUSTOMER-TRAFFIC-28
+no ip routing vrf napalm
+no ip routing vrf test
 !
 management api http-commands
+   no shutdown
+!
+management api netconf
+   transport ssh def
+!
+management telnet
    no shutdown
 !
 end

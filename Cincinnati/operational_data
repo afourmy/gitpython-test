@@ -1,40 +1,12 @@
 
-                              COMMAND 'SHOW RUN' [shusers]
-                              ****************************
+                              COMMAND 'SHOW USERS' [shusers]
+                              ******************************
 
 
-shusers - ! Command: show running-config
-shusers - ! device: localhost (vEOS, EOS-4.23.1F)
-shusers - !
-shusers - ! boot system flash:/vEOS-lab.swi
-shusers - !
-shusers - transceiver qsfp default-mode 4x10G
-shusers - !
-shusers - spanning-tree mode mstp
-shusers - !
-shusers - no aaa root
-shusers - !
-shusers - username admin privilege 15 role network-admin secret sha512 $6$ShuyKzG/D1oOik78$rv5.M/fskKvrpPT9gntdwDlBSA9KUgsXhmjWTJZNobffvOK30/IpWhxVM7GEW6/Qtm1YUe2yvtLDgBLVvAb8R.
-shusers - !
-shusers - vrf instance CUSTOMER-TRAFFIC-28
-shusers - !
-shusers - interface Ethernet1
-shusers - !
-shusers - interface Loopback28
-shusers -    ip address 10.34.34.3/24
-shusers - !
-shusers - interface Management1
-shusers -    ip address 192.168.56.50/24
-shusers - !
-shusers - ip address virtual source-nat address 10.35.35.3
-shusers - !
-shusers - no ip routing
-shusers - no ip routing vrf CUSTOMER-TRAFFIC-28
-shusers - !
-shusers - management api http-commands
-shusers -    no shutdown
-shusers - !
-shusers - end
+shusers -      Line      User        Host(s)       Idle        Location       
+shusers -    1 vty 34    admin       idle          00:00:45    192.168.56.108 
+shusers -    2 vty 13    admin       idle          00:01:49    192.168.56.108 
+shusers - *  3 vty 27    admin       idle          00:00:01    192.168.56.108 
 
 
                               COMMAND 'SHOW IP INTERFACE BRIEF' [shipintbr]
@@ -44,7 +16,11 @@ shusers - end
 shipintbr -                                                                                  Address 
 shipintbr - Interface         IP Address             Status       Protocol            MTU    Owner   
 shipintbr - ----------------- ---------------------- ------------ -------------- ----------- ------- 
-shipintbr - Loopback28        10.34.34.3/24          up           up                65535            
+shipintbr - Loopback1         1.1.1.1/32             up           up                65535            
+shipintbr - Loopback2         2.2.2.2/32             up           up                65535            
+shipintbr - Loopback3         3.3.3.3/32             up           up                65535            
+shipintbr - Loopback4         unassigned             up           up                65535            
+shipintbr - Loopback5         unassigned             up           up                65535            
 shipintbr - Management1       192.168.56.50/24       up           up                 1500            
 
 
@@ -52,9 +28,10 @@ shipintbr - Management1       192.168.56.50/24       up           up            
                               ******************
 
 
-   VRF                       RD              Protocols       State             Interfaces              
-------------------------- --------------- --------------- -------------------- ----------------------- 
-   CUSTOMER-TRAFFIC-28       <not set>       ipv4,ipv6       pending create                            
-   default                   <not set>       ipv4,ipv6       v4:no routing,    Loopback28, Management1 
-                                                             v6:no routing                             
-                                                                                                       
+   VRF           RD              Protocols       State             Interfaces             
+------------- --------------- --------------- -------------------- ---------------------- 
+   default       <not set>       ipv4,ipv6       v4:no routing,    Loopback1, Loopback2,  
+                                                 v6:no routing     Loopback3, Management1 
+                                                                                          
+   napalm        <not set>       ipv4,ipv6       pending create                           
+   test          <not set>       ipv4,ipv6       pending create                           
