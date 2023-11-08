@@ -5,7 +5,7 @@
 !
 transceiver qsfp default-mode 4x10G
 !
-spanning-tree mode mstp
+spanning-tree mode stp
 !
 no aaa root
 !
