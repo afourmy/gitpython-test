@@ -4,11 +4,13 @@
 
 
 ! Command: show running-config
-! device: localhost (vEOS, EOS-4.23.1F)
+! device: localhost (vEOS, EOS-4.25.2F)
 !
 ! boot system flash:/vEOS-lab.swi
 !
 transceiver qsfp default-mode 4x10G
+!
+service routing protocols model ribd
 !
 spanning-tree mode mstp
 !
@@ -16,13 +18,9 @@ aaa authorization exec default local
 !
 no aaa root
 !
-username admin privilege 15 role network-admin secret sha512 $6$ShuyKzG/D1oOik78$rv5.M/fskKvrpPT9gntdwDlBSA9KUgsXhmjWTJZNobffvOK30/IpWhxVM7GEW6/Qtm1YUe2yvtLDgBLVvAb8R.
-username sammy privilege 15 secret sha512 $6$SNpEccP107A7vx7/$dPsdkT.dmBwwumIgqAjXE4zbAr16xf/mT18FYQtkQlNBm64mOfhBnWhU7uuJzxmagVxPX2NkdQRgNzMzNQbEl.
-username sammy ssh-key ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQC4FS4+zPbd/49klI0czCDu6gHZRsSN4XOnEz0lfKNc2QE2s3/fH9Pgi1Zl7ByXInMWFfZ+ZWNgVgEhMSijFq7y8cOB6P+3jCeVz/6QLD9UN6jMz2pPI5azs2PQ0pbrSr0AMmHlru9ex1t0xgKiMRE85O3HpJWAkL14j//EXRV1HURwbU2mapkRR47Dl0DR4khuSYUMoYuGD8g8knE6r/NZt+UmNTGpGKegJ6EEXdKQepKUVUwC8hnFHIG0VfD/ubUrdgjrOIa/T+3mZwqyHmOZxytQP/KZzu72SeLOzb3QJKS6VY4Okm2NngJI/W7UbvnNaHnREkeA/27H5keuIUjbRBHBqiepxjK3UTJ0JVxXKuMlkOdTh8SnWdXKm0nZR66sc+lOBhRjz8pMxRKA3PiPoY1N41SYB+duIQUH19JcYVEbOAMyV2no3om6MtRrMzd3/SVNwRfiZIFsesydHNKap0iBczCt1gOEByOUwIvLEeE1hUb8JXSGD7g/1fnaBnpoqo/Q72Suur34NYMy9/6d5qZv+UKcDf2h0YD+PdirrmWcTeCaW13Z4fXY5dUIsKKTM3M+QuX/e6J/ooRX0qpm0GhhT1+yK4SJxyWbxBwoxzhqhWE3b4qWNcoRlMJWnln1gmzvYvCx3bihZaQGRcsce6DJGVhBYP+/VHvl6Q+LBw== email@email.com
-!
-vrf instance napalm
-!
-vrf instance test
+username admin privilege 15 role network-admin secret sha512 $6$UV5EYt4geNyYIPoR$YpjAUJ8KXkOaCZqlhI7Ndl1vL7r8RYMMsKVPZ.fAR6VFwhfXlB3p4YkiQee2YPBnvvTDd7F4/CD4sUZwPQch10
+username sammy privilege 15 secret sha512 $6$2xKSwnG7Z23w5xi/$94dKMQ9ZRMLP6ouyI.PBXyz5uxG6/hdNwkSeQIUqb71Wae/VXVt0WtbktjRUAe30fLMjuMLbe3IydyPZhK8/R0
+username sammy ssh-key ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCvOOhFcZ4/OMGjBbAP77ruXjoazMLvsyOjZWEY6rGqK9fm1XhrbA8O3Y5XjJ1n+S6RgSlvKWd8mL/I+opYNkKoYNNsqfspTcN9WXLgWcsQ2hV0PuWAdgkbQ5FXmfb2XKacJQTpGlI8lPVfNj/VJYgoLBRCrp0Ifxt2VeIoSnvHDYDq3rOsVSDAYD7mCKUes5EwguUutVzMh62K8sIusiL7hZWjBPbE7ubPqDyY57/m+xO7I+j/yfEAXj3rtnIQ/GfWro71HTaL41h5MUO3OXMDawCiznJ/5Gb5wJQj3gv9ycqu61rzfYmPWxMGrTH6sxzNfMRImyblJMDBQV0T3UQ/
 !
 interface Loopback1
    ip address 1.1.1.1/32
@@ -33,17 +31,10 @@ interface Loopback2
 interface Loopback3
    ip address 3.3.3.3/32
 !
-interface Loopback4
-   ip address 4.4.4.5/32
-!
-interface Loopback5
-!
 interface Management1
-   ip address 192.168.56.50/24
+   ip address 192.168.56.51/24
 !
 no ip routing
-no ip routing vrf napalm
-no ip routing vrf test
 !
 management api http-commands
    no shutdown
