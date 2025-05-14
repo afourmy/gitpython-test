@@ -4,8 +4,7 @@
 
 
 shusers -     Line      User        Host(s)       Idle        Location       
-shusers -    1 vty 3    admin       idle          00:06:04    192.168.56.1   
-shusers - *  2 vty 5    admin       idle          00:00:01    192.168.56.101 
+shusers - *  1 vty 3    admin       idle          00:00:02    192.168.56.109 
 
 
                               COMMAND 'SHOW IP INTERFACE BRIEF' [shipintbr]

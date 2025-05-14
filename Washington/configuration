@@ -19,8 +19,6 @@ aaa authorization exec default local
 no aaa root
 !
 username admin privilege 15 role network-admin secret sha512 $6$UV5EYt4geNyYIPoR$YpjAUJ8KXkOaCZqlhI7Ndl1vL7r8RYMMsKVPZ.fAR6VFwhfXlB3p4YkiQee2YPBnvvTDd7F4/CD4sUZwPQch10
-username sammy privilege 15 secret sha512 $6$2xKSwnG7Z23w5xi/$94dKMQ9ZRMLP6ouyI.PBXyz5uxG6/hdNwkSeQIUqb71Wae/VXVt0WtbktjRUAe30fLMjuMLbe3IydyPZhK8/R0
-username sammy ssh-key ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCvOOhFcZ4/OMGjBbAP77ruXjoazMLvsyOjZWEY6rGqK9fm1XhrbA8O3Y5XjJ1n+S6RgSlvKWd8mL/I+opYNkKoYNNsqfspTcN9WXLgWcsQ2hV0PuWAdgkbQ5FXmfb2XKacJQTpGlI8lPVfNj/VJYgoLBRCrp0Ifxt2VeIoSnvHDYDq3rOsVSDAYD7mCKUes5EwguUutVzMh62K8sIusiL7hZWjBPbE7ubPqDyY57/m+xO7I+j/yfEAXj3rtnIQ/GfWro71HTaL41h5MUO3OXMDawCiznJ/5Gb5wJQj3gv9ycqu61rzfYmPWxMGrTH6sxzNfMRImyblJMDBQV0T3UQ/
 !
 interface Loopback1
    ip address 1.1.1.1/32
