@@ -3,10 +3,12 @@
                               ******************************
 
 
-shusers -      Line      User        Host(s)       Idle        Location       
-shusers -    1 vty 34    admin       idle          00:00:45    192.168.56.108 
-shusers -    2 vty 13    admin       idle          00:01:49    192.168.56.108 
-shusers - *  3 vty 27    admin       idle          00:00:01    192.168.56.108 
+shusers -     Line      User        Host(s)       Idle        Location       
+shusers -    1 vty 3    admin       idle          00:00:04    192.168.56.109 
+shusers - *  2 vty 5    admin       idle          00:00:04    192.168.56.109 
+shusers -    3 vty 4    admin       idle          00:00:04    192.168.56.109 
+shusers -    4 vty 7    admin       idle          00:00:04    192.168.56.109 
+shusers -    5 vty 6    admin       idle          00:00:04    192.168.56.109 
 
 
                               COMMAND 'SHOW IP INTERFACE BRIEF' [shipintbr]
