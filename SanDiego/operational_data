@@ -1,0 +1,30 @@
+
+                              COMMAND 'SHOW USERS' [shusers]
+                              ******************************
+
+
+shusers -      Line      User        Host(s)       Idle        Location     
+shusers - *  1 vty 14    admin       idle          00:00:00    172.100.100.1
+shusers -    2 vty 16    admin       idle          00:00:16    172.100.100.1
+shusers -    3 vty 18    admin       idle          00:00:14    172.100.100.1
+
+
+                              COMMAND 'SHOW IP INTERFACE BRIEF' [shipintbr]
+                              *********************************************
+
+
+shipintbr -                                                                                  Address
+shipintbr - Interface         IP Address              Status       Protocol           MTU    Owner  
+shipintbr - ----------------- ----------------------- ------------ -------------- ---------- -------
+shipintbr - Management0       172.100.100.11/24       up           up                1500           
+
+
+                              COMMAND 'SHOW VRF'
+                              ******************
+
+
+Maximum number of VRFs allowed: 1024
+   VRF           Protocols       State         Interfaces
+------------- --------------- ---------------- ----------
+   default       IPv4            no routing    Ma0       
+   default       IPv6            no routing    Ma0       
